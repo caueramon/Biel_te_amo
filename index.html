@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te Amo Biel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heart" class="heart">💚 Clique aqui 💙</h1>
+    </div>
+    
+    <script>
+        // Função para criar vários corações com a mensagem "TE AMO BIEL"
+        function createHearts() {
+            const container = document.querySelector('.container');
+            container.innerHTML = ''; // Limpa o conteúdo anterior
+
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '💚 TE AMO BIEL 💙';
+                container.appendChild(heart);
+            }
+        }
+
+        // Adiciona evento de clique ao coração principal
+        document.getElementById('main-heart').addEventListener('click', createHearts);
+    </script>
+</body>
+</html>
